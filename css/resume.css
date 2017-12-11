@@ -6,8 +6,10 @@
 body {
   font-family: 'Open Sans', serif;
   padding-top: 54px;
-  color: #868e96; }
-
+  color: #000000; }
+.text {
+  color:#f6f6f6;
+}
 @media (min-width: 992px) {
   body {
     padding-top: 0;
@@ -22,7 +24,7 @@ h6 {
   font-family: 'Saira Extra Condensed', serif;
   font-weight: 700;
   text-transform: uppercase;
-  color: #343a40; }
+  color: #000000; }
 
 h1 {
   font-size: 6rem;
@@ -85,6 +87,7 @@ h2 {
           #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
             display: block; } }
 
+
 section.resume-section {
   border-bottom: 1px solid #dee2e6;
   padding-top: 5rem !important;
@@ -104,10 +107,10 @@ section.resume-section {
     padding-bottom: 3rem !important; } }
 
 .bg-primary {
-  background-color: #BD5D38 !important; }
+  background-color: #6610f2 !important; }
 
 .text-primary {
-  color: #BD5D38 !important; }
+color:#f6f6f6!important; }
 
 a {
   color: #BD5D38; }
