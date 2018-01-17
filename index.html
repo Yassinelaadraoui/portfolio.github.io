@@ -20,6 +20,7 @@
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet">
     <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 
     <!-- Custom styles for this template -->
     <link href="css/resume.min.css" rel="stylesheet">
@@ -113,6 +114,13 @@
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://drive.google.com/file/d/1TDgHCQPU-5H-sgGhYGRaHPifmeLK2p2t/view?usp=sharing">
+                <span class="fa-stack fa-lg">
+                  <img width="50px" src="img/test.png"></img>
                 </span>
               </a>
             </li>
@@ -254,43 +262,28 @@
       <section style="color:#e3e5df" class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
         <div class="my-auto">
           <h2 class="mb-5">Interests</h2>
-          <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skiier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
-          <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technolgy advancements in the front-end web development world.</p>
+          <p>Apart from being a web developer, I enjoy reading and learning about new subject. Currently, I am reading about machine learning and AI and i enjoy being outdoor and camping.</p>
+          <p class="mb-0">I enjoy travelling i've been to many places accross europe and in  my home country. and learning about new cultures, new languages and history.</p>
         </div>
       </section>
 
-      <section style="color:#e3e5df" class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
+      <section  ng-app="myApp" ng-controller="myCtrl" style="color:#e3e5df" class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
+        <style>
+          #div1{
+            display: inline-block;
+            margin-bottom: 20px;
+          }
+        </style>
         <div class="my-auto">
-          <h2 class="mb-5">Awards &amp; Certifications</h2>
-          <ul class="fa-ul mb-0">
-            <li>
-              <i class="fa-li fa fa-trophy text-warning"></i>
-              Google Analytics Certified Developer</li>
-            <li>
-              <i class="fa-li fa fa-trophy text-warning"></i>
-              Mobile Web Specialist - Google Certification</li>
-            <li>
-              <i class="fa-li fa fa-trophy text-warning"></i>
-              1<sup>st</sup>
-              Place - University of Colorado Boulder - Emerging Tech Competition 2009</li>
-            <li>
-              <i class="fa-li fa fa-trophy text-warning"></i>
-              1<sup>st</sup>
-              Place - University of Colorado Boulder - Adobe Creative Jam 2008 (UI Design Category)</li>
-            <li>
-              <i class="fa-li fa fa-trophy text-warning"></i>
-              2<sup>nd</sup>
-              Place - University of Colorado Boulder - Emerging Tech Competition 2008</li>
-            <li>
-            <li>
-              <i class="fa-li fa fa-trophy text-warning"></i>
-              1<sup>st</sup>
-              Place - James Buchanan High School - Hackathon 2006</li>
-            <li>
-              <i class="fa-li fa fa-trophy text-warning"></i>
-              3<sup>rd</sup>
-              Place - James Buchanan High School - Hackathon 2005</li>
-          </ul>
+          <h2 class="mb-5">Projects</h2>
+          <div id="div1" style="width:230px;height:90px" ng-repeat="n in projects">
+              <h4 style="color:white">{{n.name}} </h4>
+              <a href="{{n.link}}">
+                <button type="button" style="background-image:#990099" class="btn "><i class="fa fa-github" aria-hidden="true"></i> Github</button>
+
+              </a>
+
+          </div>
         </div>
       </section>
 
@@ -305,6 +298,43 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/resume.min.js"></script>
+    <script>
+
+var app = angular.module("myApp", []);
+
+app.controller("myCtrl", function($scope) {
+    $scope.projects = [{
+      "name":"Travelling sales person algorith in JS",
+      "link":"https://github.com/Yassinelaadraoui/TPS-using-js-"
+    },
+    {
+      "name":"Chrome-Extension replaces img in browser to kittens",
+      "link":"https://github.com/Yassinelaadraoui/replace_img_chrome_extensions"
+    },
+    {
+      "name":"Solar system animation Using JavaScript",
+      "link":"https://github.com/Yassinelaadraoui/Planet-animation"
+    },{
+      "name":"PHP todo list using Codeign using Jsiter",
+      "link":"https://github.com/Yassinelaadraoui/codeigniter-todo-app"
+    },{
+      "name":"Instagram client app clone Using PhoneGap ",
+      "link":"https://github.com/Yassinelaadraoui/insta"
+    },{
+      "name":"Instagram server like RESTAPI using Heroku",
+      "link":"https://github.com/Yassinelaadraoui/server-for-insta"
+    },{
+      "name":"Airbnb like application using Ionic/ PhoneGap",
+      "link":"https://github.com/Yassinelaadraoui/Rent-a-room-app"
+    },{
+      "name":"Botanic algorithm animation in js ",
+      "link":"https://github.com/Yassinelaadraoui/botanic-algorithm-js-animation"
+    },{
+      "name":"Tourist toolbox Android app",
+      "link":"https://github.com/Yassinelaadraoui/Tourist-toolbox-android-app"
+    }];
+});
+</script>
 
   </body>
 
